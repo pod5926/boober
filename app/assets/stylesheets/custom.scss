@@ -1,26 +1,16 @@
 @import "bootstrap";
 
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+$gray-light: #777;
+$gray: gray;
+$gray-darker: gray;
+
 /* universal */
 
 body {
-  padding-top: 70px;
-  /* 画像ファイルの指定 */
-  background-image: url("bg.jpg");
-
-  /* 画像を常に天地左右の中央に配置 */
-  background-position: center center;
-
-  /* 画像をタイル状に繰り返し表示しない */
-  background-repeat: no-repeat;
-
-  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
-  background-attachment: fixed;
-
-  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-  background-size: cover;
-
-  /* 背景画像が読み込まれる前に表示される背景のカラー */
-  background-color: #464646;
+  padding-top: 86px;
 }
 
 section {
@@ -33,15 +23,15 @@ textarea {
 
 .center {
   text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 .jumbotron {
   background-color: rgba(255,255,255,0.8);
 }
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,7 +51,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: $gray-light;
 }
 
 p {
@@ -69,6 +59,71 @@ p {
   line-height: 1.7em;
 }
 
+
+/* header */
 .navbar-dark .navbar-toggler {
   border-color: rgba(0, 0, 0, 0);
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  background-color: black;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/* home */
+
+.home {
+  /* 画像ファイルの指定 */
+  background-image: url("bg.jpg");
+
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
 }
