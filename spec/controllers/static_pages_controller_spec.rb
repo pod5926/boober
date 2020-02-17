@@ -19,7 +19,7 @@ RSpec.describe StaticPagesController, type: :controller do
   #help
   describe "#help の接続テスト" do
     it "returns http success" do
-      get :home
+      get :help
       expect(response).to have_http_status(:success)
     end
   end
@@ -27,7 +27,7 @@ RSpec.describe StaticPagesController, type: :controller do
   #about
   describe "#about の接続テスト" do
     it "returns http success" do
-      get :home
+      get :about
       expect(response).to have_http_status(:success)
     end
   end
