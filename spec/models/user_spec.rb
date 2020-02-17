@@ -32,8 +32,10 @@ RSpec.describe User, type: :model do
   end
 
   it "有効なメールフォーマットをテストする" do
-    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
-      first.last@foo.jp alice+bob@baz.cn]
+    valid_addresses = %w(
+      user@example.com USER@foo.COM A_US-ER@foo.bar.org
+      first.last@foo.jp alice+bob@baz.cn
+    )
     valid_addresses.each do |valid_address|
       @user.email = valid_address
       expect(@user).to be_valid
@@ -41,8 +43,10 @@ RSpec.describe User, type: :model do
   end
 
   it "無効なメールフォーマットをテストする" do
-    invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
-                          foo@bar_baz.com foo@bar+baz.com]
+    invalid_addresses = %w(
+      user@example,com user_at_foo.org user.name@example.
+      foo@bar_baz.com foo@bar+baz.com
+    )
     invalid_addresses.each do |invalid_address|
       @user.email = invalid_address
       expect(@user).to be_invalid
@@ -68,14 +72,14 @@ RSpec.describe User, type: :model do
     @user.password = @user.password_confirmation = "a" * 6
     expect(@user).to be_valid
 
-    #" "が６文字のパスワードのテスト
+    # " "が６文字のパスワードのテスト
     @user.password = @user.password_confirmation = " " * 6
-    expect(@user).to_not be_valid
+    expect(@user).not_to be_valid
   end
 
-  #パスワードの長さテスト
+  # パスワードの長さテスト
   describe "password length" do
-    #パスワードが6桁の時と５桁の時のテストを行うことで、どの位置からバリデーションが用意されているのか可視化している
+    # パスワードが6桁の時と５桁の時のテストを行うことで、どの位置からバリデーションが用意されているのか可視化している
     context "パスワードが６桁の時" do
       it "正しい" do
         @user = FactoryBot.build(:user, password: "a" * 6, password_confirmation: "a" * 6)
