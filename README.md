@@ -7,7 +7,7 @@
  - Rails      5.2.4
  - postgresql 12.1
  - bootstrap
- - Vue.js
+ - AWS
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
