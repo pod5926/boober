@@ -1,62 +1,15 @@
-inherit_from: .rubocop_todo.yml
-require:
-  - rubocop-rails
-  - rubocop-rspec
+inherit_from:
+  - .rubocop_airbnb.yml
 
+#以下にはrubocopで検証したくないフォルダを指定する
 AllCops:
   Exclude:
-    - "vendor/**/*"
-    - "db/**/*"
-    - "bin/**/*"
-    - "spec/**/*"
-  DisplayCopNames: true
-
-Rails:
-  Enabled: true
-
-Rails/Output:
-  Exclude:
-    - "config/unicorn/**/*"
-
-Metrics/AbcSize:
-  Max: 30
-
-Metrics/ClassLength:
-  CountComments: false
-  Max: 300
-
-Metrics/CyclomaticComplexity:
-  Max: 30
-
-Layout/LineLength:
-  Enabled: false
-
-Metrics/MethodLength:
-  CountComments: false
-  Max: 30
-
-Naming/AccessorMethodName:
-  Exclude:
-    - "app/controllers/**/*"
-
-# 日本語でのコメントを許可
-Style/AsciiComments:
-  Enabled: false
-
-# モジュール名::クラス名の定義を許可
-Style/ClassAndModuleChildren:
-  Enabled: false
-
-# クラスのコメント必須を無視
-Style/Documentation:
-  Enabled: false
-
-# 文字リテラルのイミュータブル宣言を無視（freezeになるのはRuby3以降）
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Style/IfUnlessModifier:
-  Enabled: false
-
-Style/WhileUntilModifier:
-  Enabled: false
+    - 'db/**/*'
+    - 'bin/*'
+    - 'config/environments/*'
+    - 'config/application.rb'
+    - 'config/initializers/*'
+    - 'config/spring.rb'
+    - 'lib/tasks/*'
+    - 'vendor/**/*'
+    - 'path/ruby'
