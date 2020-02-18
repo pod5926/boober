@@ -26,7 +26,7 @@ RSpec.feature "StaticPages", type: :feature do
   # helpページ
   describe "Help page" do
     before do
-      visit helf_path
+      visit help_path
     end
 
     it "has the content 'StaticPages#help'" do

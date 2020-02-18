@@ -1,0 +1,33 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 16,
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 0,
+  "terminal.integrated.fontSize": 18,
+  "trailing-spaces.trimOnSave": true,
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Dracula At Night",
+  "terminal.integrated.shell.osx": "/bin/bash",
+  "guides.limit.maximum": 1,
+  "guides.enabled": false,
+  "editor.autoClosingBrackets": "always",
+  "ruby.intellisense": "rubyLocate",
+  "files.associations": {
+      "*.erb": "erb",
+  },
+  "emmet.includeLanguages": {
+      "erb": "html"
+  },
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "css.remoteStyleSheets": [
+      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+  ],
+  "css.fileExtensions": [
+      "css",
+      "scss"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+}
