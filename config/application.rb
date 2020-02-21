@@ -28,6 +28,12 @@ module App1
     # the framework and any gems in your application.
 
     # Don't generate system test files.
+    config.generators do |g|
+      g.assets false
+      g.helper false
+      g.test_framework :rspec, view_specs: false, helper_specs: false, fixture: true
+      g.fixture_replacement :factory_bot, dir: "spec/factories"
+    end
     config.generators.system_tests = nil
   end
 end
