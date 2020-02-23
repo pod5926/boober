@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
     it "空白NG" do
       @user.name = " "
       expect(@user).to be_invalid
-      expect(@user.errors[:name]).to include("can't be blank")
+      expect(@user.errors[:name]).to include("を入力してください")
     end
 
     it "長さの検証" do
@@ -68,7 +68,7 @@ RSpec.describe User, type: :model do
         invalid_addresses.each do |invalid_address|
           @user.email = invalid_address
           expect(@user).to be_invalid
-          expect(@user.errors[:email]).to include("is invalid")
+          expect(@user.errors[:email]).to include("は不正な値です")
         end
       end
     end

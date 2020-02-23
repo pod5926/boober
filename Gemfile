@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 gem 'rails', '~> 5.2.1'
 gem 'bcrypt',         '3.1.12'
+gem 'i18n'
+gem 'faker',  '2.10.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -40,3 +42,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # bootstrap
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
+gem 'kaminari'
