@@ -10,10 +10,10 @@ ja:
     models:
       task: タスク
     attributes:
-      task:
+      book:
         id: ID
         name: 名称
-        description: 詳しい説明
+        content: 感想
         image: 画像
         created_at: 登録日時
         updated_at: 更新日時
@@ -35,7 +35,7 @@ ja:
     - 金
     - 土
     abbr_month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月
@@ -61,7 +61,7 @@ ja:
       long: "%Y年%m月%d日(%a)"
       short: "%m/%d"
     month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月

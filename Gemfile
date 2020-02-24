@@ -6,7 +6,9 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.1'
 gem 'bcrypt',         '3.1.12'
 gem 'i18n'
-gem 'faker',  '2.10.0'
+gem 'faker', '2.10.0'
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -35,6 +37,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'fog', '1.42'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -19,3 +19,19 @@ User.create!(name:  name,
   activated: true,
   activated_at: Time.zone.now)
 end
+
+#本のダミー
+users = User.order(:created_at).take(6)   #最初の6人
+
+# rand(10).times do
+#   content = Faker::Book.title
+#   users.each { |user| user.books.create!(content: content) }
+# end
+post = [10,30,5]
+users.each do |user|
+  post[rand(3)].times do
+    title = Faker::Book.title
+    content = Faker::Lorem.word
+    user.books.create!(title: title, content: content)
+  end
+end
