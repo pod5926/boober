@@ -1,6 +1,6 @@
 <% if @feed_items.any? %>
-  <ol class="books">
+  <div class="books d-flex flex-wrap justify-content-md-start">
     <%= render @feed_items %>
-  </ol>
+  </div>
   <%= paginate @feed_items %>
 <% end %>

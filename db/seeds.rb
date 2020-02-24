@@ -31,7 +31,7 @@ post = [10,30,5]
 users.each do |user|
   post[rand(3)].times do
     title = Faker::Book.title
-    content = Faker::Lorem.word
+    content = Faker::Lorem.sentence(word_count:3)
     user.books.create!(title: title, content: content)
   end
 end

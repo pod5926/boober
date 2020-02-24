@@ -11,9 +11,9 @@
   <div class="col-md-8">
     <% if @user.books.any? %>
       <h3>Books (<%= @user.books.count %>)</h3>
-      <ol class="books">
+      <div class="books d-flex flex-wrap justify-content-md-start">
         <%= render @books %>
-      </ol>
+      </div>
       <%= paginate @books %>
     <% end %>
   </div>
