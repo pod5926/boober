@@ -1,0 +1,52 @@
+<% provide(:title, "Edit book") %>
+<% provide(:buttom_text, 'Save changes') %>
+
+<h1><%= I18n.t"bookshelf.page.titles.Book_show" %> </h1>
+<div class="row">
+  <table  class="table table-striped mx-auto">
+    <tbody>
+      <tr>
+        <th>画像</th>
+        <td>
+          <% if @book.picture? %>
+            <%= image_tag @book.picture.url %>
+          <% else %>
+            <%= image_tag('sm.jpg') %>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>タイトル</th>
+        <td>
+          <%= @book.title %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= Book.human_attribute_name(:content) %></th>
+        <td>
+          <%= @book.content %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= Book.human_attribute_name(:created_at) %></th>
+        <td>
+          <%= @book.created_at %>
+        </td>
+      </tr>
+      <tr>
+        <% if current_user?(@book.user) %>
+            <th>編集</th>
+          <% else %>
+            <th>投稿ユーザー</th>
+        <% end %>
+        <td>
+          <% if current_user?(@book.user) %>
+              <%= link_to "delete", @book, method: :delete, data: { confirm: "You sure?" } %>
+            <% else %>
+              <%= link_to @book.user.name, user_path(@book.user.id) %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,15 +1,15 @@
 <div class="book" id="book-<%= book.id %>">
   <span class="content">
   <% if book.picture? %>
-      <%= image_tag book.picture.url  %>
+      <%= link_to image_tag book.picture.url, book, data: {"turbolinks" => false} %>
     <% else %>
-      <%= image_tag('sm.jpg')  %>
+      <%= link_to image_tag('sm.jpg'), book, data: {"turbolinks" => false} %>
   <% end %>
-    <%= book.title %><br>
-    <%= book.content %>
+    <%= book.title %>
   </span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(book.created_at) %> ago.
+      <%# 時間表示 %>
+    | <%= Book.human_attribute_name(:posted) %> <%= time_ago_in_words(book.created_at) %> <%= Book.human_attribute_name(:ago) %> |
     <% if current_user?(book.user) %>
       <%= link_to "delete", book, method: :delete, data: { confirm: "You sure?" } %>
     <% end %>

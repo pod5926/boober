@@ -1,5 +1,9 @@
 ---
 ja:
+  bookshelf:
+    page:
+      titles:
+        Book_show: 詳細
   activerecord:
     errors:
       messages:
@@ -17,6 +21,8 @@ ja:
         image: 画像
         created_at: 登録日時
         updated_at: 更新日時
+        ago: 前
+        posted: 投稿
       user:
         name: 名前
         email: メールアドレス
