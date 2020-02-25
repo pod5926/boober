@@ -8,7 +8,7 @@ User.create!(name:  "Example User",
   activated: true,
   activated_at: Time.zone.now)
 
-55.times do |n|
+30.times do |n|
 name  = Faker::Name.name
 email = "example-#{n+1}@railstutorial.org"
 password = "password"
@@ -21,15 +21,16 @@ User.create!(name:  name,
 end
 
 #本のダミー
-users = User.order(:created_at).take(6)   #最初の6人
+#users = User.order(:created_at).take(6)   #最初の6人
+users = User.all
 
 # rand(10).times do
 #   content = Faker::Book.title
 #   users.each { |user| user.books.create!(content: content) }
 # end
-post = [10,30,5]
+post = [5,7,9,11,13]
 users.each do |user|
-  post[rand(3)].times do
+  post[rand(5)].times do
     title = Faker::Book.title
     content = Faker::Lorem.sentence(word_count:3)
     user.books.create!(title: title, content: content)
