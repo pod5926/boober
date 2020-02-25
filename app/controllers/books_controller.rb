@@ -1,6 +1,11 @@
 class BooksController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy, :show]
+  before_action :logged_in_user, only: [:index, :create, :destroy, :show]
   before_action :correct_user,   only: :destroy
+
+  def index
+    @q = Book.ransack(params[:q])
+    @books = @q.result(distinct: true).page(params[:page])
+  end
 
   def show
     begin

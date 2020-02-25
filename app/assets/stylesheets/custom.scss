@@ -231,7 +231,6 @@ input {
 .books {
   .book {
     width: 50%;
-
   }
   padding: 0;
   .content {
@@ -240,6 +239,12 @@ input {
       display: block;
       padding: 5px 0;
     }
+  }
+  .title {
+    display: block;
+  }
+  .name {
+    display: block;
   }
   .timestamp {
     color: $gray-light;

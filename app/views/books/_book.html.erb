@@ -5,8 +5,12 @@
     <% else %>
       <%= link_to image_tag('sm.jpg'), book, data: {"turbolinks" => false} %>
   <% end %>
-    <%= book.title %>
   </span>
+  <% if current_user?(book.user) %>
+    <span class="title text-success"><%= book.title %></span>
+  <% else %>
+    <span class="title text-primary"><%= book.title %></span>
+  <% end %>
   <span class="timestamp">
       <%# 時間表示 %>
     | <%= Book.human_attribute_name(:posted) %> <%= time_ago_in_words(book.created_at) %> <%= Book.human_attribute_name(:ago) %> |

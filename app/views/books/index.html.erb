@@ -1,0 +1,9 @@
+  <div class="col-md-8 mx-auto">
+  <h3>Seach_Result (<%= @books.count %>)</h3>
+    <% if @books.any? %>
+      <div class="books d-flex flex-wrap justify-content-md-start">
+        <%= render @books %>
+      </div>
+      <%= paginate @books %>
+    <% end %>
+  </div>

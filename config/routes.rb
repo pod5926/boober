@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
-  resources :books,               only: [:create, :destroy, :show]
+  resources :books,               only: [:index, :create, :destroy, :show]
 
   # 適当なページ
   get '/test', to: 'static_pages#test'
