@@ -3,9 +3,9 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
-$gray-light: #777;
-$gray: gray;
-$gray-darker: rgb(104, 104, 104);
+$gray-light: #402717;
+$gray: #d6c299;
+$gray-darker: #d6c299;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -17,6 +17,8 @@ $gray-darker: rgb(104, 104, 104);
 
 body {
   padding-top: 90px;
+  color: #402717;
+  background-color: #f6efdb;
 }
 
 section {
@@ -35,16 +37,18 @@ textarea {
 }
 
 .jumbotron {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 30px;
   .title {
     font-size: 5rem;
     text-align: center;
+    color: #d6c299;
+
   }
   .txt {
     margin: 30px;
     font-size: 2rem;
-    color: chocolate;
+    color: #f6efdb;
   }
 }
 
@@ -85,38 +89,13 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.5em;
-  color: white;
+  color: #d6c299;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: #d6c299;
     text-decoration: none;
-  }
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
   }
 }
 
@@ -139,7 +118,7 @@ footer {
   background-size: cover;
 
   /* 背景画像が読み込まれる前に表示される背景のカラー */
-  background-color: #464646;
+  background-color: #d6c299;
 }
 
 /* miscellaneous */

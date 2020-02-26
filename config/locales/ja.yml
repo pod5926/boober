@@ -38,6 +38,7 @@ ja:
         Setting: セッティング
         Log in:  ログイン
         Log out: ログアウト
+        Users: ユーザー
       titles:
         Show book: 詳細
         All users: ユーザー一覧
@@ -47,10 +48,11 @@ ja:
         Reset password: パスワードリセット
         Forgot password: パスワード再設定
       parts:
+        Books: 投稿数
         Book title: タイトル
         book coment: 感想
         Search_result: 検索結果
-        Book Feed: 本一覧
+        Book Feed: 一覧
         view my profile: プロフィール
         Post: 投稿
         book title: 作品名

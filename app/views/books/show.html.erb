@@ -40,7 +40,7 @@
         <% end %>
         <td>
           <% if current_user?(@book.user) %>
-              <%= link_to "delete", @book, method: :delete, data: { confirm: "You sure?" } %>
+              <%= link_to "削除", @book, method: :delete, data: { confirm: "本当に削除しますか？" } %>
             <% else %>
               <%= link_to @book.user.name, user_path(@book.user.id) %>
           <% end %>

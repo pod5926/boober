@@ -7,7 +7,7 @@
   <% end %>
   </span>
   <% if current_user?(book.user) %>
-    <span class="title text-success"><%= book.title %></span>
+    <span class="title"><%= book.title %></span>
   <% else %>
     <span class="title text-primary"><%= book.title %></span>
   <% end %>
@@ -15,7 +15,7 @@
       <%# 時間表示 %>
     | <%= Book.human_attribute_name(:posted) %> <%= time_ago_in_words(book.created_at) %> <%= Book.human_attribute_name(:ago) %> |
     <% if current_user?(book.user) %>
-      <%= link_to "delete", book, method: :delete, data: { confirm: "You sure?" } %>
+      <%= link_to "削除", book, method: :delete, data: { confirm: "本当に削除しますか？" } %>
     <% end %>
   </span>
 </div>
