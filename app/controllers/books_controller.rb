@@ -3,8 +3,6 @@ class BooksController < ApplicationController
   before_action :correct_user,   only: :destroy
 
   def index
-    @q = Book.ransack(params[:q])
-    @books = @q.result(distinct: true).page(params[:page])
   end
 
   def show
@@ -16,7 +14,7 @@ class BooksController < ApplicationController
   def create
     @book = current_user.books.build(book_params)
     if @book.save
-      flash[:success] = "created!"
+      flash[:success] = I18n.t "bookshelf.controller.created!"
       redirect_to root_url
     else
       @feed_items = []
@@ -26,7 +24,7 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
-    flash[:success] = "Book deleted"
+    flash[:success] = I18n.t "bookshelf.controller.Book deleted"
     redirect_back(fallback_location: root_url)
   end
 

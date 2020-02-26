@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def set_search
     @q = Book.search(params[:q])
-    @students = @q.result(distinct: true).page(params[:page])
+    @books = @q.result(distinct: true).page(params[:page])
   end
 
   private
@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = "Please log in."
+      flash[:danger] = I18n.t "bookshelf.controller.Please log in"
       redirect_to login_url
     end
   end

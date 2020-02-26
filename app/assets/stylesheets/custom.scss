@@ -36,6 +36,16 @@ textarea {
 
 .jumbotron {
   background-color: rgba(255,255,255,0.8);
+  margin: 30px;
+  .title {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .txt {
+    margin: 30px;
+    font-size: 2rem;
+    color: chocolate;
+  }
 }
 
 /* typography */

@@ -1,9 +1,76 @@
 ---
 ja:
   bookshelf:
+    mail:
+      Hi: こんにちは
+      Welcome to the Book Shelf! Click on the link below to activate your account: Book Shelfへようこそ！以下のリンクをクリックして、アカウントを有効にします。
+      Password reset: パスワードリセット
+      To reset your password click the link below: パスワードをリセットするには、以下のリンクをクリックしてください
+      This link will expire in two hours: このリンクは2時間で期限切れになります
+      If you did not request your password to be reset, please ignore this email and your password will stay as it is: パスワードのリセットをリクエストしていない場合は、このメールを無視してください。パスワードはそのままになります
+    controller:
+      Account activated!: 認証しました
+      Invalid activation link: 無効なアクティベーションリンクです
+      # ApplicationController
+      Please log in: ログインしてください
+      # BooksController
+      created!: 投稿しました
+      Book deleted: 本を削除しました
+      # PasswordResetsController
+      Email sent with password reset instructions: パスワードリセットのメールを送信しました
+      Email address not found: メールアドレスが見つかりません
+      Password has been reset: パスワードがリセットされました
+      Password reset has expired: リセット期限が切れました
+      # SessionsController
+      Account not activated: アカウントがアクティブではありません
+      Check your email for the activation link: アクティベーションメールを確認してください
+      Invalid email/password combination: 無効なメール/パスワードの組み合わせです
+      # UsersController
+      Please check your email to activate your accoun: メールを確認してアカウントを有効にしてください
+      Profile updated: 更新成功しました
+      User deleted: ユーザーを削除しました
     page:
+      header:
+        Home: ホーム
+        Help: 使い方
+        Account: アカウント
+        Profile: プロフィール
+        Setting: セッティング
+        Log in:  ログイン
+        Log out: ログアウト
       titles:
-        Book_show: 詳細
+        Show book: 詳細
+        All users: ユーザー一覧
+        Update profile: ユーザー情報変更
+        Log in: ログイン
+        Sign up: 新規登録
+        Reset password: パスワードリセット
+        Forgot password: パスワード再設定
+      parts:
+        Book title: タイトル
+        book coment: 感想
+        Search_result: 検索結果
+        Book Feed: 本一覧
+        view my profile: プロフィール
+        Post: 投稿
+        book title: 作品名
+        Search: 検索
+        change: 変更
+        Save changes: 登録
+        Submit: 確定
+        post: 送信中
+        You sure?: 本当に削除しますか？
+        delete: 削除
+    session:
+      email: メールアドレス
+      password: パスワード
+      forgot password: 忘れた方はこちら
+      Remember me on this computer: ログイン情報を記憶する
+      New user?: 初めての方
+      Sign up now!: 新規登録
+      Let's talk about memories: 思い出を語ろう
+      Log in: ログイン
+      post: 送信中
   activerecord:
     errors:
       messages:

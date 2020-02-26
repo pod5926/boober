@@ -1,13 +1,11 @@
 <body class="home">
   <div class="center jumbotron">
-    <h1>思い出を語ろう</h1>
 
-    <h2>
-      This is the home page for the
-      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
+    <h1 class="title">Book Shelf</h1>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary", data: {"turbolinks" => false} %>
+    <h2 class="txt"><%= btn = I18n.t"bookshelf.session.Let's talk about memories" %></h2>
+
+    <% btn = I18n.t"bookshelf.session.Sign up now!" %>
+    <%= link_to btn, signup_path, class: "btn btn-lg btn-primary", data: {"turbolinks" => false} %>
   </div>
 </body>

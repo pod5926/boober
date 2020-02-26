@@ -1,7 +1,6 @@
-<% provide(:title, "Edit book") %>
-<% provide(:buttom_text, 'Save changes') %>
+<% provide(:title, "Show book") %>
 
-<h1><%= I18n.t"bookshelf.page.titles.Book_show" %> </h1>
+<h1><%= I18n.t"bookshelf.page.titles.Show book" %></h1>
 <div class="row">
   <table  class="table table-striped mx-auto">
     <tbody>
@@ -30,7 +29,7 @@
       <tr>
         <th><%= Book.human_attribute_name(:created_at) %></th>
         <td>
-          <%= @book.created_at %>
+          <%= @book.created_at.to_s(:datetime_jp) %>
         </td>
       </tr>
       <tr>

@@ -13,5 +13,5 @@
       <%= f.label User.human_attribute_name(:password_confirmation) %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
-    <% end %>
+      <input type="submit" name="commit" value= <%= I18n.t"bookshelf.page.parts.Save changes" %> class="btn btn-primary" data-disable-with= <%= I18n.t"bookshelf.page.parts.post" %>>
+  <% end %>
