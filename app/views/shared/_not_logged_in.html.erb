@@ -1,11 +1,19 @@
 <body class="home">
   <div class="center jumbotron">
 
-    <h1 class="title">Book Shelf</h1>
+    <h1 class="title">BOOBER</h1>
 
-    <h2 class="txt"><%= btn = I18n.t"bookshelf.session.Let's talk about memories" %></h2>
+    <h2 class="txt"> - <%= btn = I18n.t"bookshelf.session.Let's talk about memories" %> - </h2>
 
     <% btn = I18n.t"bookshelf.session.Sign up now!" %>
     <%= link_to btn, signup_path, class: "btn btn-lg btn-primary", data: {"turbolinks" => false} %>
+
+    <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.hidden_field :email, value: "test@gmail.com" %>
+      <%= f.hidden_field :password, value: "password" %>
+      <input type="submit" name="commit" value= <%= I18n.t"bookshelf.session.Test Log in" %> class="btn btn-info btn-lg test" data-disable-with= <%= I18n.t"bookshelf.session.post" %>>
+    <% end %>
+
+
   </div>
 </body>
