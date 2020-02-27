@@ -26,8 +26,8 @@ ja:
       Check your email for the activation link: アクティベーションメールを確認してください
       Invalid email/password combination: 無効なメール/パスワードの組み合わせです
       # UsersController
-      Please check your email to activate your accoun: メールを確認してアカウントを有効にしてください
-      Profile updated: 更新成功しました
+      Please check your email to activate your account: メールを確認してアカウントを有効にしてください
+      Profile updated: 更新しました
       User deleted: ユーザーを削除しました
     page:
       header:
@@ -41,7 +41,7 @@ ja:
         Users: ユーザー
       titles:
         Show book: 詳細
-        All users: ユーザー一覧
+        All users: ユーザー
         Update profile: ユーザー情報変更
         Log in: ログイン
         Sign up: 新規登録
