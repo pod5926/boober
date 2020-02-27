@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   root   'static_pages#home'
-  get    '/help',    to: 'static_pages#help'
-  get    '/about',   to: 'static_pages#about'
-  get    '/contact', to: 'static_pages#contact'
   get    '/signup',  to: 'users#new'
   post   '/signup',  to: 'users#create'
   get    '/login',   to: 'sessions#new'
@@ -13,6 +10,8 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :books,               only: [:index, :create, :destroy, :show]
 
-  # 適当なページ
-  get '/test', to: 'static_pages#test'
+  # 2/27 使ってない
+  # get    '/help',    to: 'static_pages#help'
+  # get    '/about',   to: 'static_pages#about'
+  # get    '/contact', to: 'static_pages#contact'
 end

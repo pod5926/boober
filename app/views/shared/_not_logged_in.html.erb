@@ -11,7 +11,7 @@
     <%= form_for(:session, url: login_path) do |f| %>
       <%= f.hidden_field :email, value: "test@gmail.com" %>
       <%= f.hidden_field :password, value: "password" %>
-      <input type="submit" name="commit" value= <%= I18n.t"bookshelf.session.Test Log in" %> class="btn btn-info btn-lg test" data-disable-with= <%= I18n.t"bookshelf.session.post" %>>
+      <input type="submit" name="commit" value= <%= I18n.t"bookshelf.session.Test Log in" %> class="btn btn-warning btn-lg test" data-disable-with= <%= I18n.t"bookshelf.session.post" %>>
     <% end %>
 
 
