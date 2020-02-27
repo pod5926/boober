@@ -10,7 +10,7 @@
 
       <ul class="navbar-nav mr-auto">　
         <li class="nav-item">
-          <% help = I18n.t"bookshelf.page.header.Help" %>
+          <% help = I18n.t"bookshelf.page.header.How to use" %>
           <%= link_to help, help_path, data: {"turbolinks" => false}, class: "nav-link"%>
         </li>
       </ul>
@@ -42,6 +42,13 @@
       </ul>
       <% else %>
       <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= form_for(:session, url: login_path) do |f| %>
+          <%= f.hidden_field :email, value: "test@gmail.com" %>
+          <%= f.hidden_field :password, value: "password" %>
+          <input type="submit" name="commit" value= <%= I18n.t"bookshelf.session.Test Log in" %> class="btn btn-info hed" data-disable-with= <%= I18n.t"bookshelf.session.post" %>>
+          <% end %>
+        </li>
         <li class="nav-item">
           <% log_in = I18n.t"bookshelf.page.header.Log in" %>
           <%= link_to log_in, login_path, class: "nav-link" %>

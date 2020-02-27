@@ -32,7 +32,7 @@ ja:
     page:
       header:
         Home: ホーム
-        Help: 使い方
+        How to use: 使い方
         Account: アカウント
         Profile: プロフィール
         Setting: セッティング
@@ -73,6 +73,7 @@ ja:
       Let's talk about memories: 思い出を語ろう
       Log in: ログイン
       post: 送信中
+      Test Log in: テストログイン
   activerecord:
     errors:
       messages:
