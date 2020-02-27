@@ -63,6 +63,7 @@ ja:
         post: 送信中
         You sure?: 本当に削除しますか？
         delete: 削除
+        test user no use: テストユーザーは使用できません
     session:
       email: メールアドレス
       password: パスワード

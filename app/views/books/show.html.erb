@@ -40,7 +40,11 @@
         <% end %>
         <td>
           <% if current_user?(@book.user) %>
+            <% unless @book.user.email == "test@gmail.com" %>
               <%= link_to "削除", @book, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+            <% else %>
+              <%= I18n.t"bookshelf.page.parts.test user no use" %>
+            <% end %>
             <% else %>
               <%= link_to @book.user.name, user_path(@book.user.id) %>
           <% end %>

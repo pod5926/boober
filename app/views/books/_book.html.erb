@@ -15,7 +15,9 @@
       <%# 時間表示 %>
     | <%= Book.human_attribute_name(:posted) %> <%= time_ago_in_words(book.created_at) %> <%= Book.human_attribute_name(:ago) %> |
     <% if current_user?(book.user) %>
-      <%= link_to "削除", book, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+      <% unless book.user.email == "test@gmail.com" %>
+        <%= link_to "削除", book, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+      <% end %>
     <% end %>
   </span>
 </div>
