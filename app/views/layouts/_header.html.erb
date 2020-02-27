@@ -9,11 +9,9 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
       <ul class="navbar-nav mr-auto">　
-        <% if logged_in? %>
-          <li class="nav-item">
-            <%= link_to "GitHub", "https://github.com/pod5926/portfolio" , class: "nav-link"%>
-          </li>
-        <% end %>
+        <li class="nav-item">
+          <%= link_to "GitHub", "https://github.com/pod5926/portfolio" , class: "nav-link"%>
+        </li>
       </ul>
       <%# ログイン状態により表示が変わる %>
       <% if logged_in? %>

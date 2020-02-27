@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
-  resources :books,               only: [:index, :create, :destroy, :show]
+  resources :books,               only: [:index, :create, :destroy, :show, :edit, :update]
 
   # 2/27 使ってない
   # get    '/help',    to: 'static_pages#help'

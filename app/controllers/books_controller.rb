@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :logged_in_user, only: [:index, :create, :destroy, :show]
-  before_action :correct_user,   only: :destroy
+  before_action :correct_user,   only: [:edit, :update, :destroy]
 
   def index
   end
@@ -19,6 +19,20 @@ class BooksController < ApplicationController
     else
       @feed_items = []
       render 'static_pages/home'
+    end
+  end
+
+  def edit
+    @book = Book.find(params[:id])
+  end
+
+  def update
+    @book = Book.find(params[:id])
+    if @book.update_attributes(book_params)
+      flash[:success] = I18n.t "bookshelf.controller.Profile updated"
+      redirect_to root_url
+    else
+      render 'edit'
     end
   end
 
