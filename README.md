@@ -1,17 +1,14 @@
-# README
-
-ポートフォリオ置き場
-　　
-# ＜使用技術（予定）＞
- - Ruby
- - Rails
+# BOOBER とは
+  読んだ本の画像、感想を投稿し記録する Ruby on Rails で作成した アプリです。
+  ユーザーが今まで読んだ本を一覧で確認することができ、思い出を記録することができます。
+# 機能一覧
+ - ユーザー登録
+ - 管理ユーザー機能
+ - メールでの認証機能（SendGrid）
+ - ログイン機能(session,cookie)
+ - 投稿のCRUD
+ - 画像アップロード(Active Storage)
+ - 検索機能(ransack)
+ - ページネーション(kaminari)
  - postgresql
- - bootstrap
- - AWS
-
-## ＜実装したい機能＞
- - CRUD機能
- - ログイン機能
- - お気に入り
- - 画像アップロード
- - メール機能
+ - Bootstrap4
