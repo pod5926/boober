@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def set_search
-    @q = Book.search(params[:q])
+    @q = Book.ransack(params[:q])
     @books = @q.result(distinct: true).page(params[:page])
   end
 
