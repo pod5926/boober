@@ -13,8 +13,8 @@
  - - ユーザー削除
  - メールでの認証機能（SendGrid）
  - ログイン機能(session,cookie)
+ - 画像アップロード(Active Storage + AWS S3)
  - 投稿のCRUD
- - 画像アップロード(Active Storage)
  - 検索機能(ransack)
  - ページネーション(kaminari)
  - DB(postgresql)
