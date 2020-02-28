@@ -39,6 +39,7 @@ users.each do |user|
     content = Faker::Lorem.sentence(word_count:3)
     user.books.create!(title: title, content: content)
   end
+  user.books.create!(title: "プロを目指す人のためのRuby入門", content: "test")
 end
 
 User.create!(
