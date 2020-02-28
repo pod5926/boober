@@ -55,6 +55,19 @@ textarea {
   }
 }
 
+@media (max-width: 600px) {
+  .jumbotron {
+    .title {
+      font-size: 2.5rem;
+    }
+    .txt {
+      font-size: 1rem;
+    }
+    .info {
+      font-size: 1rem;
+    }
+  }
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
