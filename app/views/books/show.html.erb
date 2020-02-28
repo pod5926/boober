@@ -41,7 +41,7 @@
           <% end %>
           <td>
             <% if current_user?(@book.user) %>
-              <% if @book.user.email == "test@gmail.com" %>
+              <% unless @book.user.email == "test@gmail.com" %>
                 <%= link_to "編集", edit_book_path, data: {"turbolinks" => false}, class: "btn btn-info btn-md" %>
                 <%= link_to "削除", @book, method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger btn-md" %>
               <% else %>
