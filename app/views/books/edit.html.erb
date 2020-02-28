@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-md-8 col-md-offset-3 mx-auto">
-    <% unless @book.user.email == "test@gmail.com" %>
+    <% if @book.user.email == "test@gmail.com" %>
       <%= form_for(@book) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
 
