@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
         redirect_to root_url
       else
-        message  = I18n.t"bookshelf.controller.Account not activated. "
+        message  = I18n.t"bookshelf.controller.Account not activated"
         message += I18n.t"bookshelf.controller.Check your email for the activation link."
         flash[:warning] = message
         redirect_to root_url
