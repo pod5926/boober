@@ -1,5 +1,5 @@
-<div class="book" id="book-<%= book.id %>">
-  <span class="content">
+<div class="book text-center" id="book-<%= book.id %>">
+  <span class="content img-thumbnail ">
     <% if book.picture? %>
       <%= link_to (image_tag book.picture.url), book, data: {"turbolinks" => false} %>
     <% else %>
@@ -16,7 +16,7 @@
     | <%= Book.human_attribute_name(:posted) %> <%= time_ago_in_words(book.created_at) %> <%= Book.human_attribute_name(:ago) %> |
     <% if current_user?(book.user) %>
       <% unless book.user.email == "test@gmail.com" %>
-        <%= link_to "削除", book, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+        <%= link_to "削除", book, method: :delete, data: { confirm: "本当に削除しますか？" } %> |
       <% end %>
     <% end %>
   </span>
