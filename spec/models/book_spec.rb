@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Book, type: :model do
   before do
     @user = FactoryBot.create(:user)
-    @book = @user.books.build(content: "Lorem ipsum")
+    @book = @user.books.build(title: "test",content: "Lorem ipsum")
   end
 
   it "有効なBookかどうかをテストする" do
