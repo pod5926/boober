@@ -1,6 +1,6 @@
-<% provide(:title, "Show book") %>
+<% provide(:title, (I18n.t"boober.page.titles.Show book")) %>
 
-<h1><%= I18n.t"bookshelf.page.titles.Show book" %></h1>
+<h1><%= I18n.t"boober.page.titles.Show book" %></h1>
 <div class="row">
   <div class="col-md-10 mx-auto">
     <table  class="table table-striped mx-auto">
@@ -35,17 +35,17 @@
         </tr>
         <tr>
           <% if current_user?(@book.user) %>
-              <th>ユーザー機能</th>
+              <th><%= I18n.t"boober.page.parts.User Action" %></th>
             <% else %>
-              <th>投稿ユーザー</th>
+              <th><%= I18n.t"boober.page.parts.Post User" %></th>
           <% end %>
           <td>
             <% if current_user?(@book.user) %>
               <% unless @book.user.email == "test@gmail.com" %>
-                <%= link_to "編集", edit_book_path, data: {"turbolinks" => false}, class: "btn btn-info btn-md" %>
-                <%= link_to "削除", @book, method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger btn-md" %>
+                <%= link_to (I18n.t"boober.page.parts.edit"), edit_book_path, data: {"turbolinks" => false}, class: "btn btn-info btn-md" %>
+                <%= link_to (I18n.t"boober.page.parts.delete"), @book, method: :delete, data: { confirm: (I18n.t"boober.page.parts.You sure?") }, class: "btn btn-danger btn-md" %>
               <% else %>
-                <%= I18n.t"bookshelf.page.parts.test user no use" %>
+                <%= I18n.t"boober.page.parts.test user no use" %>
               <% end %>
               <% else %>
                 <%= link_to @book.user.name, user_path(@book.user.id) %>

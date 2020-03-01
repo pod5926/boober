@@ -3,7 +3,7 @@
   <%= link_to user.name, user, data: {"turbolinks" => false} %>
   | <%= user.books.count %> 冊
   <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "削除", user, method: :delete,
-                                  data: { confirm: "本当に削除しますか？" } %>
+    | <%= link_to (I18n.t"boober.page.parts.delete"), user, method: :delete,
+                                  data: { confirm: (I18n.t"boober.page.parts.You sure?") } %>
   <% end %>
 </li>

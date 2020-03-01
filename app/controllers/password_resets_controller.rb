@@ -11,10 +11,10 @@ class PasswordResetsController < ApplicationController
     if @user
       @user.create_reset_digest
       @user.send_password_reset_email
-      flash[:info] = I18n.t "bookshelf.controller.Email sent with password reset instructions"
+      flash[:info] = I18n.t "boober.controller.Email sent with password reset instructions"
       redirect_to root_url
     else
-      flash.now[:danger] = I18n.t "bookshelf.controller.Email address not found"
+      flash.now[:danger] = I18n.t "boober.controller.Email address not found"
       render 'new'
     end
   end
@@ -29,7 +29,7 @@ class PasswordResetsController < ApplicationController
     elsif @user.update_attributes(user_params)  # 空じゃない
       log_in @user
       @user.update_attribute(:reset_digest, nil)
-      flash[:success] = I18n.t "bookshelf.controller.Password has been reset"
+      flash[:success] = I18n.t "boober.controller.Password has been reset"
       redirect_to @user
     else
       render 'edit'
@@ -59,7 +59,7 @@ class PasswordResetsController < ApplicationController
   # トークンが期限切れかどうか確認する
   def check_expiration
     if @user.password_reset_expired?
-      flash[:danger] = I18n.t "bookshelf.controller.Password reset has expired"
+      flash[:danger] = I18n.t "boober.controller.Password reset has expired"
       redirect_to new_password_reset_url
     end
   end

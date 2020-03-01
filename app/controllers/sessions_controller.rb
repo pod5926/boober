@@ -10,13 +10,13 @@ class SessionsController < ApplicationController
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
         redirect_to root_url
       else
-        message  = I18n.t"bookshelf.controller.Account not activated"
-        message += I18n.t"bookshelf.controller.Check your email for the activation link."
+        message  = I18n.t"boober.controller.Account not activated"
+        message += I18n.t"boober.controller.Check your email for the activation link."
         flash[:warning] = message
         redirect_to root_url
       end
     else
-      flash.now[:danger] = I18n.t "bookshelf.controller.Invalid email/password combination"
+      flash.now[:danger] = I18n.t "boober.controller.Invalid email/password combination"
       render 'new'
     end
   end

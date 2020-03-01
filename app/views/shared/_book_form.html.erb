@@ -1,10 +1,10 @@
 <%= form_for(@book) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <input placeholder= <%= I18n.t"bookshelf.page.parts.Book title" %> type="text" name="book[title]" id="book_title">
-    <textarea placeholder= <%= I18n.t"bookshelf.page.parts.book coment" %> name="book[content]" id="book_content"></textarea>
+    <input placeholder= <%= I18n.t"boober.page.parts.Book title" %> type="text" name="book[title]" id="book_title">
+    <textarea placeholder= <%= I18n.t"boober.page.parts.book coment" %> name="book[content]" id="book_content"></textarea>
   </div>
-  <input type="submit" name="commit" value= <%= I18n.t"bookshelf.page.parts.Post" %> class="btn btn-primary" data-disable-with= <%= I18n.t"bookshelf.page.parts.post" %> >
+  <input type="submit" name="commit" value= <%= I18n.t"boober.page.parts.Post" %> class="btn btn-primary" data-disable-with= <%= I18n.t"boober.page.parts.post" %> >
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>

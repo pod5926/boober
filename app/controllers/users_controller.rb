@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = I18n.t "bookshelf.controller.Please check your email to activate your account"
+      flash[:info] = I18n.t "boober.controller.Please check your email to activate your account"
       redirect_to root_url
     else
       render 'new'
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = I18n.t "bookshelf.controller.Profile updated"
+      flash[:success] = I18n.t "boober.controller.Profile updated"
       redirect_to @user
     else
       render 'edit'
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = I18n.t "bookshelf.controller.User deleted"
+    flash[:success] = I18n.t "boober.controller.User deleted"
     redirect_to users_url
   end
 

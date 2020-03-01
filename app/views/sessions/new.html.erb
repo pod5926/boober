@@ -1,24 +1,24 @@
-<% provide(:title, "Log in") %>
-<h1><%= I18n.t"bookshelf.page.titles.Log in" %></h1>
+<% provide(:title, (I18n.t"boober.page.titles.Log in")) %>
+<h1><%= I18n.t"boober.page.titles.Log in" %></h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3 mx-auto">
     <%= form_for(:session, url: login_path) do |f| %>
-      <label for="session_email"><%= I18n.t"bookshelf.session.email" %></label>
+      <label for="session_email"><%= I18n.t"boober.session.email" %></label>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <label for="session_email"><%= I18n.t"bookshelf.session.password" %></label>
-      <a href="/password_resets/new">(<%= I18n.t"bookshelf.session.forgot password" %>)</a>
+      <label for="session_email"><%= I18n.t"boober.session.password" %></label>
+      <a href="/password_resets/new">(<%= I18n.t"boober.session.forgot password" %>)</a>
       <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :remember_me, class: "checkbox inline" do %>
         <%= f.check_box :remember_me %>
-        <span><%= I18n.t"bookshelf.session.Remember me on this computer" %></span>
+        <span><%= I18n.t"boober.session.Remember me on this computer" %></span>
       <% end %>
 
-    <input type="submit" name="commit" value= <%= I18n.t"bookshelf.session.Log in" %> class="btn btn-primary" data-disable-with= <%= I18n.t"bookshelf.session.post" %>>
-<% end %>
+      <input type="submit" name="commit" value= <%= I18n.t"boober.session.Log in" %> class="btn btn-primary" data-disable-with= <%= I18n.t"boober.session.post" %>>
+    <% end %>
 
-    <p><%= I18n.t"bookshelf.session.New user?" %><a href="/signup"> <%= I18n.t"bookshelf.session.Sign up now!" %></a></p>
+    <p><%= I18n.t"boober.session.New user?" %><a href="/signup"> <%= I18n.t"boober.session.Sign up now!" %></a></p>
   </div>
 </div>

@@ -1,14 +1,15 @@
 ---
 ja:
-  bookshelf:
-    mail:
+  boober:
+    mail: #完成
       Hi: こんにちは
       Welcome to the BOOBER! Click on the link below to activate your account: BOOBERへようこそ！以下のリンクをクリックして、アカウントを有効にします。
       Password reset: パスワードリセット
       To reset your password click the link below: パスワードをリセットするには、以下のリンクをクリックしてください
       This link will expire in two hours: このリンクは2時間で期限切れになります
       If you did not request your password to be reset, please ignore this email and your password will stay as it is: パスワードのリセットをリクエストしていない場合は、このメールを無視してください。パスワードはそのままになります
-    controller:
+    controller: #完成
+      #AccountActivationsController
       Account activated!: 認証しました
       Invalid activation link: 無効なアクティベーションリンクです
       # ApplicationController
@@ -30,16 +31,15 @@ ja:
       Profile updated: 更新しました
       User deleted: ユーザーを削除しました
     page:
-      header:
+      header: #完成
         Home: ホーム
-        How to use: 使い方
         Account: アカウント
         Profile: プロフィール
         Setting: セッティング
         Log in:  ログイン
         Log out: ログアウト
         Users: ユーザー
-      titles:
+      titles: #users: ok, Static: ok, shared: ok, sessions: ok, password_resets: ok, books: ok
         Show book: 詳細
         All users: ユーザー
         Update profile: ユーザー情報変更
@@ -48,6 +48,7 @@ ja:
         Sign up: 新規登録
         Reset password: パスワードリセット
         Forgot password: パスワード再設定
+        HOME: ホーム
       parts:
         Books: 投稿数
         Book title: タイトル
@@ -63,8 +64,12 @@ ja:
         Submit: 確定
         post: 送信
         You sure?: 本当に削除しますか？
+        User Action: ユーザー機能
+        Post User: 投稿ユーザー
+        edit: 編集
         delete: 削除
         test user no use: テストユーザーは使用できません
+        Update password: パスワード更新
     session:
       email: メールアドレス
       password: パスワード
