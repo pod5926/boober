@@ -20,3 +20,4 @@
  - DB(postgresql)
  - フロントデザイン(Bootstrap4)
  - i18による日本語対応
+ - rubocop & rspec による解析
